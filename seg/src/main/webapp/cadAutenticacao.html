@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cad. Autenticação</title>
+</head>
+<style>
+input[type=text], input[type=url], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: lightblue;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Cadastro de Autenticação</h3>
+
+<div>
+  <form action="cadAutenticacao"  method="post"  accept-charset="UTF-8">
+    <label>Token Endpoint</label>
+    <input type="url" name="deTokenEndpoint" placeholder="https://ifsc.edu.br/token">
+
+    <label>Client Secret</label>
+    <input type="password" name="deClientSecret">
+    
+    <label>Token</label>
+    <input type="text" name="deToken" placeholder="c0ce7f40-e12b-393e-bb7c-5ad1fc3c9841">
+    
+    <label>Usuario</label>
+    <input type="text" name="idUsuario" placeholder="viniciusdemoraes">
+
+    <label>Grant Type</label>
+    <select name="idGrantType">
+      <option value="1">Authorization Code</option>
+      <option value="2">Client Credentials</option>
+      <option value="3">Refresh Token</option>
+    </select>
+  
+    <input type="submit" value="Salvar">
+  </form>
+</div>
+
+</body>
+</html>
+
